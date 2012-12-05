@@ -1,0 +1,17 @@
+!!! 5
+%html
+  %head(prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# fbapi-testapp: http://ogp.me/ns/fb/fbapi-testapp#")
+    %title="Sample Picture: #{@id}"
+    %meta(property="fb:app_id" content="376345502418484")
+    %meta(property="og:type"   content="fbapi-testapp:picture")
+    %meta(property="og:url"    content="http://fbapi-testapp.herokuapp.com/picture/#{@id}")
+    %meta(property="og:title"  content="Sample Picture: #{@id}")
+    %meta(property="og:image"  content="#{@image_url}")
+    %meta(property="og:description" content="Test picture's description")
+    %link(rel="stylesheet" href="/css/reset.css")
+    %link(rel="stylesheet" href="/css/base.css")
+    %script(src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
+  %body
+    %p
+      Picture ID,
+      = @id
